@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { ToastContainer, toast } from 'react-toastify';
 const request = require('superagent');
 const axios = require('axios')
 class App extends Component {
