@@ -149,7 +149,12 @@ class App extends Component {
     return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.GuavaPrice() + this.StrawberryPrice() + this.KiwiPrice();
   }
   CumTotalPrice = () => {
+    if(this.state.method == "PayTM"){
     return this.TotalPrice() + this.TaxPrice();
+  }
+  else{
+    return this.TotalPrice();
+  }
   }
   TaxPrice = () => {
     return 0.03 * this.TotalPrice();
@@ -265,7 +270,7 @@ class App extends Component {
                 <p class="text-center">Bananas (Rs 33/half dozen)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.279668502' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getbananas}></input>
+                <input name='entry.279668502' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getbananas}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.bananaPrice()}</h4>
@@ -277,7 +282,7 @@ class App extends Component {
                 <p class="text-center">Apples (Rs 55/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.1905506033' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getapples}></input>
+                <input name='entry.1905506033' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getapples}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.applePrice()}</h4>
@@ -289,7 +294,7 @@ class App extends Component {
                 <p class="text-center">Black Grapes (Rs 75/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.578303012' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getgrapesB}></input>
+                <input name='entry.578303012' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getgrapesB}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.GrapesBPrice()}</h4>
@@ -301,7 +306,7 @@ class App extends Component {
                 <p class="text-center">Green Grapes (Rs 60/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.650915965' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getgrapesG}></input>
+                <input name='entry.650915965' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getgrapesG}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.GrapesGPrice()}</h4>
@@ -313,7 +318,7 @@ class App extends Component {
                 <p class="text-center">Kinu/Orange (Rs 40/kg)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.1484179781' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getKinu}></input>
+                <input name='entry.1484179781' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getKinu}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.KinuPrice()}</h4>
@@ -325,7 +330,7 @@ class App extends Component {
                 <p class="text-center">Guava (Rs 60/kg)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.549511206' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getGuava}></input>
+                <input name='entry.549511206' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getGuava}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.GuavaPrice()}</h4>
@@ -337,7 +342,7 @@ class App extends Component {
                 <p class="text-center">Strawberry (Rs 90/box)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.747644496' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getStrawberry}></input>
+                <input name='entry.747644496' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getStrawberry}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.StrawberryPrice()}</h4>
@@ -349,7 +354,7 @@ class App extends Component {
                 <p class="text-center">Kiwi (Rs 25/piece)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <input name='entry.635633533' type="text" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getKiwi}></input>
+                <input name='entry.635633533' type="text" value="0" class="form-control mx-auto" placeholder="qty" style={{"width":"50%"}} onChange={this.getKiwi}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.KiwiPrice()}</h4>
