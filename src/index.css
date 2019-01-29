@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+h1{
+  font-family: 'Montserrat';
+  font-size: 35px !important;
+  font-weight: bold;
+}
+
+h5{
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+
+h2, h4{
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+p{
+  font-family: 'Montserrat';
+}
+
+label{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input[type=text],input[type=email]{
+  border: none !important;
+  border-bottom: 1px solid #ebebeb !important;
+  border-radius: 0 !important;
+}
+
+input[type=text]:focus,input[type=email]:focus{
+  box-shadow: none !important;
+  border-bottom: 2px solid black !important;
+}
+
+select {
+  border: none !important;
+  border-bottom: 1px solid #ebebeb !important;
+  border-radius: 0 !important;
+}
+
+select:focus{
+  box-shadow: none !important;
+  border-bottom: 2px solid black !important;
+}
+
+body{
+  background: -webkit-linear-gradient(to right, #00b09b, #96c93d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00b09b, #96c93d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+
+.panel{
+  margin:auto;
+  margin-top:100px;
+  width:80%;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(120,120,120, 0.5);
+  border-radius:10px;
+  padding:30px 60px 30px 60px;
+}
+
+.orderButton{
+  background-color: #00b09b;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  box-shadow: 5px 5px 10px #ededed;
+}
+
+.orderButton:active, .orderButton:visited{
+  background-color: #00b09b !important;
+  border: none;
+  box-shadow: none !important;
+}
+
+.orderButton:hover{
+  background-color: #00b09b;
+  box-shadow: 5px 5px 10px #dbdbdb;
+}
+
+.qrcode{
+  width: 50%;
+  display: block;
+  margin: auto;
+  height: 400px;
+  background-size: cover;
+  background-position: 0px -100px;
+  background-image: url('paytm_code.jpg');
+}
+
+.upicode{
+  width: 50%;
+  display: block;
+  margin: auto;
+  height: 400px;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-image: url('upi_code.jpg');
+}
+
+.logo{
+  width: 87px;
+  height: 104px;
+  display: block;
+  margin: auto;
+  background-size: contain;
+  background-image: url('Logo_Transp.png');
+}
