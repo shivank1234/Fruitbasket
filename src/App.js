@@ -54,6 +54,7 @@ class App extends Component {
             <h2 class="text-center">Final Price: </h2>
           </div>
           <div class="col">
+          <h2 class="text-center">Rs. {this.CumTotalPrice()}</h2>
           </div>
         </div>
         <br />
