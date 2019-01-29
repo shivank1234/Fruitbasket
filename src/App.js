@@ -382,7 +382,7 @@ class App extends Component {
             {this.ifPayNow()}
             <input name='entry.1423266867' style={{'display': "none"}} value={this.state.paid}></input>
             <input name='entry.369094106' style={{'display': "none"}} value={this.state.method}></input>
-            <input name='entry.1069858187' style={{'display': "none"}} value={this.CumTotalPrice}></input>
+            <input name='entry.1069858187' style={{'display': "none"}} value={this.CumTotalPrice()}></input>
             <br />
             <button type="submit" class="btn btn-primary btn-block orderButton" onClick={this.submitHandler}>Place Order</button>
           </form>
