@@ -59,7 +59,7 @@ class App extends Component {
           </div>
         </div>
         <br />
-        <p class="text-center">Pay the above amount to <b>9650999693</b> through PayTM, or scan the code below.</p>
+        <p class="text-center">Pay the above amount to <b>9650999693</b> through PayTM</p>
           <div class="qrcode"></div>
             <label>PayTM transaction ID</label>
             <input name="entry.82500164" type="text" class="form-control" onChange={this.IDAdded} required></input>
@@ -80,6 +80,8 @@ class App extends Component {
           </div>
         </div>
         <br /><br/>
+        <p class="text-center">Pay the above amount to <b>9650999693@paytm</b> through UPI</p>
+        <br />
           <div class="upicode"></div>
             <label>UPI Transaction ID</label>
             <input name="entry.1068253630" type="text" class="form-control" onChange={this.IDAdded} required></input>
