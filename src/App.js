@@ -52,10 +52,8 @@ class App extends Component {
         <div class="row">
           <div class="col">
             <h2 class="text-center">Final Price: </h2>
-            <input name='entry.1069858187' style={{'display': "none"}} value={this.CumTotalPrice()}></input>
           </div>
           <div class="col">
-          <h2 class="text-center">Rs. {this.CumTotalPrice()}</h2>
           </div>
         </div>
         <br />
@@ -73,7 +71,6 @@ class App extends Component {
         <div class="row">
           <div class="col">
             <h2 class="text-center">Final Price: </h2>
-            <input name='entry.1069858187' style={{'display': "none"}} value={this.TotalPrice()}></input>
           </div>
           <div class="col">
           <h2 class="text-center">Rs. {this.TotalPrice()}</h2>
