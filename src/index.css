@@ -100,7 +100,27 @@ body{
   height: 400px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url('upi_code.jpg');
+  background-image: url('bhim_code.jpg');
+}
+
+.tezcode{
+  width: 50%;
+  display: block;
+  margin: auto;
+  height: 400px;
+  background-size: cover;
+  background-position: 0px -170px;
+  background-image: url('tez_code.jpg');
+}
+
+.phonepecode{
+  width: 50%;
+  display: block;
+  margin: auto;
+  height: 450px;
+  background-size: cover;
+  background-position: 0px -110px;
+  background-image: url('phonepe_code.png');
 }
 
 .logo{
@@ -118,7 +138,7 @@ body{
     padding: 30px;
   }
 
-  .qrcode, .upicode{
+  .qrcode, .upicode, .tezcode, .phonepecode{
     display: none;
   }
 
