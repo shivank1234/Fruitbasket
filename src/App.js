@@ -311,6 +311,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.bananaPrice()} ({this.bananaQty()} Bananas)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -335,6 +336,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.applePrice()} ({this.appleQty()} Apples)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -358,6 +360,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.GrapesBPrice()} ({this.GrapesBQty()} Kg)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -381,6 +384,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.GrapesGPrice()} ({this.GrapesGQty()} Kg)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -405,6 +409,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.KinuPrice()} ({this.KinuQty()} Kinu)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -429,6 +434,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.GuavaPrice()} ({this.GuavaQty()} Guavas)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -453,6 +459,7 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.StrawberryPrice()} ({this.StrawberryQty()} Box)</h4>
               </div>
             </div>
+            <hr />
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -477,6 +484,8 @@ class App extends Component {
                 <h4 class="text-center">Rs. {this.KiwiPrice()} ({this.KiwiQty()} Kiwis)</h4>
               </div>
             </div>
+            <hr />
+            
             <br/><br/>
             <div class="row">
               <div class="col">
