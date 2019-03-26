@@ -20,12 +20,14 @@ class App extends Component {
           guava: 0,
           strawberry: 0,
           kiwi: 0,
+          raspberry: 0,
           total: 0,
           paynow: "Now",
           method: "PayTM"
         }
   }
 
+/*
   isDiscount = () => {
     if(this.TotalPrice() > 200){
       return (
@@ -52,6 +54,7 @@ class App extends Component {
       );
     }
   }
+*/
 
   paymentMethod = () => {
       if(this.state.method == "PayTM"){
@@ -66,7 +69,6 @@ class App extends Component {
           <h5 class="text-center">Rs. {this.TaxPrice()}</h5>
           </div>
         </div>
-        {this.isDiscount()}
         <div class="row">
           <div class="col">
             <h2 class="text-center">Final Price: </h2>
@@ -87,7 +89,6 @@ class App extends Component {
       return (
         <div>
         <br/>
-        {this.isDiscount()}
         <div class="row">
           <div class="col">
             <h2 class="text-center">Final Price: </h2>
@@ -109,7 +110,6 @@ class App extends Component {
       return (
         <div>
         <br/>
-        {this.isDiscount()}
         <div class="row">
           <div class="col">
             <h2 class="text-center">Final Price: </h2>
@@ -131,7 +131,6 @@ class App extends Component {
       return (
         <div>
         <br/>
-        {this.isDiscount()}
         <div class="row">
           <div class="col">
             <h2 class="text-center">Final Price: </h2>
@@ -152,31 +151,31 @@ class App extends Component {
   }
 
   bananaPrice = () => {
-    return this.state.bananas * 34;
+    return this.state.bananas * 35;
   }
   bananaQty = () => {
     return this.state.bananas * 6;
   }
   applePrice = () => {
-    return this.state.apples * 65;
+    return this.state.apples * 63;
   }
   appleQty = () => {
     return Math.floor(this.state.apples * 2.5);
   }
   GrapesBPrice = () => {
-    return this.state.grapes_b * 70;
+    return this.state.grapes_b * 65;
   }
   GrapesBQty = () => {
     return (this.state.grapes_b * 0.5);
   }
   GrapesGPrice = () => {
-    return this.state.grapes_g * 55;
+    return this.state.grapes_g * 45;
   }
   GrapesGQty = () => {
     return (this.state.grapes_g * 0.5);
   }
   KinuPrice = () => {
-    return this.state.kinu * 50;
+    return this.state.kinu * 100;
   }
   KinuQty = () => {
     return this.state.kinu * 5;
@@ -199,13 +198,19 @@ class App extends Component {
   KiwiQty = () => {
     return this.state.kiwi;
   }
+  RaspberryPrice = () => {
+    return this.state.raspberry * 50;
+  }
+  RaspberryQty = () => {
+    return this.state.raspberry * 0.25;
+  }
   TotalPrice = () => {
     return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.GuavaPrice() + this.StrawberryPrice() + this.KiwiPrice();
   }
   CumTotalPrice = () => {
     var discount = 1;
     if(this.TotalPrice() > 200){
-      discount = 0.85
+     discount = 1 // Change for discount value
     }
     if(this.state.method == "PayTM"){
     return Math.ceil(this.TotalPrice()*discount + this.TaxPrice());
@@ -270,6 +275,10 @@ class App extends Component {
     this.setState({kiwi: event.target.value});
   }
 
+  getRaspberry = (event) => {
+    this.setState({raspberry: event.target.value});
+  }
+
   getPayment = (event) => {
     this.setState({paynow: event.target.value});
   }
@@ -286,7 +295,6 @@ class App extends Component {
           <div class="logo"></div>
           <br />
           <h1 class="text-center display-4">Your Fruit Basket Order</h1>
-          <h2 class="text-center" style={{"font-size":"25px"}}>Special Midsem Offer! - 15% off on order above Rs 200</h2>
           <hr /><br/>
           <form action="https://docs.google.com/forms/d/e/1FAIpQLSeK8sYEwxuSmUiRxapBaZvq7Kqf7SZAmfxMmUxd74UfLFtZFA/formResponse" target="_self" method="POST">
             <div class="form-group">
@@ -318,6 +326,7 @@ class App extends Component {
                 <option>3C</option>
                 <option>T2</option>
                 <option>T9</option>
+                <option>Visitors' Hostel</option>
               </select>
             </div>
             <label>Your Order</label>
@@ -326,7 +335,7 @@ class App extends Component {
             <br />
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Bananas (Rs 34/half dozen)</p>
+                <p class="text-center">Bananas (Rs 35/half dozen)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.bananas} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getbananas}>
@@ -351,7 +360,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Apples (Rs 65/500gm)</p>
+                <p class="text-center">Apples (Rs 63/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.apples} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getapples}>
@@ -376,7 +385,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Black Grapes (Rs 70/500gm)</p>
+                <p class="text-center">Black Grapes (Rs 65/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" name='entry.578303012' value={this.state.grapes_b} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getgrapesB}>
@@ -400,7 +409,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Green Grapes (Rs 55/500gm)</p>
+                <p class="text-center">Green Grapes (Rs 45/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" name='entry.650915965' value={this.state.grapes_g} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getgrapesG}>
@@ -424,7 +433,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Kinu/Orange (Rs 50/kg)</p>
+                <p class="text-center">Kinu/Orange (Rs 100/kg)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.kinu} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getKinu}>
@@ -447,6 +456,7 @@ class App extends Component {
             </div>
             <hr />
 
+            {/*
             <div class="row">
               <div class='col-xs-6 col-md-4'>
                 <p class="text-center">Guava (Rs 60/kg)</p>
@@ -471,6 +481,7 @@ class App extends Component {
               </div>
             </div>
             <hr />
+            */}
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
@@ -518,6 +529,31 @@ class App extends Component {
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.KiwiPrice()} ({this.KiwiQty()} Kiwis)</h4>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class='col-xs-6 col-md-4'>
+                <p class="text-center">Raspberry (Rs 50/250gm)</p>
+              </div>
+              <div class='col-xs-6 col-md-4'>
+                <select class="form-control" id="exampleFormControlSelect1" value={this.state.raspberry} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getRaspberry}>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                </select>
+              <input name='entry.277493963' style={{'display': "none"}} value={this.KiwiQty()}></input>
+              </div>
+              <div class='col-xs-6 col-md-4'>
+                <h4 class="text-center">Rs. {this.RaspberryPrice()} ({this.RaspberryQty()} Kg)</h4>
               </div>
             </div>
             <hr />
