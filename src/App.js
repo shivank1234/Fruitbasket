@@ -205,7 +205,7 @@ class App extends Component {
     return this.state.raspberry * 0.25;
   }
   TotalPrice = () => {
-    return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.GuavaPrice() + this.StrawberryPrice() + this.KiwiPrice();
+    return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.RaspberryPrice() + this.StrawberryPrice() + this.KiwiPrice();
   }
   CumTotalPrice = () => {
     var discount = 1;
