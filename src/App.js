@@ -164,7 +164,7 @@ class App extends Component {
     return Math.floor(this.state.apples * 2.5);
   }
   GrapesBPrice = () => {
-    return this.state.grapes_b * 65;
+    return this.state.grapes_b * 70;
   }
   GrapesBQty = () => {
     return (this.state.grapes_b * 0.5);
@@ -396,7 +396,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Black Grapes (Rs 65/500gm)</p>
+                <p class="text-center">Black Grapes (Rs 70/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" name='entry.578303012' value={this.state.grapes_b} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getgrapesB}>
@@ -444,7 +444,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Kinu/Orange (Rs 100/kg)</p>
+                <p class="text-center">Oranges (Rs 100/kg)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.kinu} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getKinu}>
@@ -546,7 +546,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Raspberry (Rs 75/400gm)</p>
+                <p class="text-center">Rasbhari (Rs 75/400gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.raspberry} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getRaspberry}>
