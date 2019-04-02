@@ -21,6 +21,7 @@ class App extends Component {
           strawberry: 0,
           kiwi: 0,
           raspberry: 0,
+          chiku: 0,
           total: 0,
           paynow: "Now",
           method: "PayTM"
@@ -157,7 +158,7 @@ class App extends Component {
     return this.state.bananas * 6;
   }
   applePrice = () => {
-    return this.state.apples * 63;
+    return this.state.apples * 65;
   }
   appleQty = () => {
     return Math.floor(this.state.apples * 2.5);
@@ -193,19 +194,25 @@ class App extends Component {
     return this.state.strawberry;
   }
   KiwiPrice = () => {
-    return this.state.kiwi * 25;
+    return this.state.kiwi * 30;
   }
   KiwiQty = () => {
     return this.state.kiwi;
   }
   RaspberryPrice = () => {
-    return this.state.raspberry * 50;
+    return this.state.raspberry * 75;
   }
   RaspberryQty = () => {
-    return this.state.raspberry * 0.25;
+    return this.state.raspberry * 0.4;
+  }
+  ChikuPrice = () => {
+    return this.state.chiku * 80;
+  }
+  ChikuQty = () => {
+    return this.state.chiku * 1;
   }
   TotalPrice = () => {
-    return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.RaspberryPrice() + this.StrawberryPrice() + this.KiwiPrice();
+    return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.RaspberryPrice() + this.StrawberryPrice() + this.KiwiPrice() + this.ChikuPrice();
   }
   CumTotalPrice = () => {
     var discount = 1;
@@ -277,6 +284,10 @@ class App extends Component {
 
   getRaspberry = (event) => {
     this.setState({raspberry: event.target.value});
+  }
+
+  getChiku = (event) => {
+    this.setState({chiku: event.target.value});
   }
 
   getPayment = (event) => {
@@ -360,7 +371,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Apples (Rs 63/500gm)</p>
+                <p class="text-center">Apples (Rs 65/500gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.apples} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getapples}>
@@ -510,7 +521,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Kiwi (Rs 25/piece)</p>
+                <p class="text-center">Kiwi (Rs 30/piece)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.kiwi} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getKiwi}>
@@ -535,7 +546,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Raspberry (Rs 50/250gm)</p>
+                <p class="text-center">Raspberry (Rs 75/400gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.raspberry} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getRaspberry}>
@@ -550,10 +561,35 @@ class App extends Component {
                   <option>8</option>
                   <option>9</option>
                 </select>
-              <input name='entry.277493963' style={{'display': "none"}} value={this.KiwiQty()}></input>
+              <input name='entry.277493963' style={{'display': "none"}} value={this.RaspberryQty()}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.RaspberryPrice()} ({this.RaspberryQty()} Kg)</h4>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class='col-xs-6 col-md-4'>
+                <p class="text-center">Chiku (Rs 80/kg)</p>
+              </div>
+              <div class='col-xs-6 col-md-4'>
+                <select class="form-control" id="exampleFormControlSelect1" value={this.state.chiku} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getChiku}>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                </select>
+              <input name='entry.1989011814' style={{'display': "none"}} value={this.ChikuQty()}></input>
+              </div>
+              <div class='col-xs-6 col-md-4'>
+                <h4 class="text-center">Rs. {this.ChikuPrice()} ({this.ChikuQty()} Kg)</h4>
               </div>
             </div>
             <hr />
