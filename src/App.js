@@ -557,7 +557,7 @@ class App extends Component {
 
             <div class="row">
               <div class='col-xs-6 col-md-4'>
-                <p class="text-center">Rasbhari (Rs 75/400gm)</p>
+                <p class="text-center">Rasbhari(Yellow) (Rs 75/400gm)</p>
               </div>
               <div class='col-xs-6 col-md-4'>
                 <select class="form-control" id="exampleFormControlSelect1" value={this.state.raspberry} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getRaspberry}>
