@@ -22,6 +22,7 @@ class App extends Component {
           kiwi: 0,
           raspberry: 0,
           chiku: 0,
+          muskmelon: 0,
           total: 0,
           paynow: "Now",
           method: "PayTM"
@@ -211,8 +212,14 @@ class App extends Component {
   ChikuQty = () => {
     return this.state.chiku * 1;
   }
+  MuskMelonPrice = () => {
+    return this.state.muskmelon * 60;
+  }
+  MuskMelonQty = () => {
+    return this.state.muskmelon * 1;
+  }
   TotalPrice = () => {
-    return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.RaspberryPrice() + this.StrawberryPrice() + this.KiwiPrice() + this.ChikuPrice();
+    return this.bananaPrice() + this.applePrice() + this.GrapesBPrice() + this.GrapesGPrice() + this.KinuPrice() + this.RaspberryPrice() + this.StrawberryPrice() + this.KiwiPrice() + this.ChikuPrice() + this.MuskMelonPrice();
   }
   CumTotalPrice = () => {
     var discount = 1;
@@ -288,6 +295,10 @@ class App extends Component {
 
   getChiku = (event) => {
     this.setState({chiku: event.target.value});
+  }
+
+  getMuskMelon = (event) => {
+    this.setState({muskmelon: event.target.value});
   }
 
   getPayment = (event) => {
@@ -462,7 +473,7 @@ class App extends Component {
               <input name='entry.1484179781' style={{'display': "none"}} value={this.KinuQty()}></input>
               </div>
               <div class='col-xs-6 col-md-4'>
-                <h4 class="text-center">Rs. {this.KinuPrice()} ({this.KinuQty()} Kinu)</h4>
+                <h4 class="text-center">Rs. {this.KinuPrice()} ({this.KinuQty()} Oranges)</h4>
               </div>
             </div>
             <hr />
@@ -590,6 +601,31 @@ class App extends Component {
               </div>
               <div class='col-xs-6 col-md-4'>
                 <h4 class="text-center">Rs. {this.ChikuPrice()} ({this.ChikuQty()} Kg)</h4>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class='col-xs-6 col-md-4'>
+                <p class="text-center">Musk Melon(White) (Rs 60/piece)</p>
+              </div>
+              <div class='col-xs-6 col-md-4'>
+                <select class="form-control" id="exampleFormControlSelect1" value={this.state.muskmelon} style={{"width":"50%","display":"block","margin":"auto"}} onChange={this.getMuskMelon}>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                </select>
+              <input name='entry.829716315' style={{'display': "none"}} value={this.MuskMelonQty()}></input>
+              </div>
+              <div class='col-xs-6 col-md-4'>
+                <h4 class="text-center">Rs. {this.MuskMelonPrice()} ({this.MuskMelonQty()} Musk Melon)</h4>
               </div>
             </div>
             <hr />
